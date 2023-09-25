@@ -1,0 +1,17 @@
+
+
+% \usepackage[disable]{todonotes}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\let\Oldtodo\todo
+\renewcommand{\todo}[1]{\Oldtodo[inline]{\textbf{TODO:} #1}}
+\newcommand{\tom}[2][]{\Oldtodo[inline,color=SeaGreen, #1]{\textbf{Tom:} #2}}
+\newcommand{\andy}[2][]{\Oldtodo[inline,color=cyan, #1]{\textbf{Andy:} #2}}
+\renewcommand{\v}[2][]{\Oldtodo[inline,color=Yellow, #1]{\textbf{v:} #2}}
+\newcommand{\newPerson}[2][]{\Oldtodo[inline,color=lime, #1]{\textbf{newPerson:} #2}}
+
+\newcommand{\help}[2][]{\Oldtodo[inline,color=pink, #1]{\textbf{Help requested:} #2}}
+\newcommand{\feedback}[2][]{\Oldtodo[inline,color=pink, #1]{\textbf{Feedback requested:} #2}}
+\newcommand{\everyone}[2][]{\Oldtodo[inline,color=Purple, #1]{\textbf{Everyone: #2}}}
+
+\newcommand{\needcite}[2][]{\footnote{\Oldtodo[inline, color=pink, #1]{Needs citation}}}

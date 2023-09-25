@@ -1,0 +1,181 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[twocolumn, twocolappendix]{aastex631}
+% \received{\today}
+\shorttitle{RATRATARRATRATTS}
+\graphicspath{{figures/}}
+
+\usepackage{lipsum}
+\usepackage{physics}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{natbib}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage{wrapfig}
+\usepackage[figuresright]{rotating}
+
+% remove indents in footnotes
+\usepackage[hang,flushmargin]{footmisc} 
+
+\usepackage{styles/todo_notes}
+
+\newcommand{\placeholder}[1]{{\color{gray} \lipsum[#1]}}
+
+% custom function for adding units
+\makeatletter
+\newcommand{\unit}[1]{%
+    \,\mathrm{#1}\checknextarg}
+\newcommand{\checknextarg}{\@ifnextchar\bgroup{\gobblenextarg}{}}
+\newcommand{\gobblenextarg}[1]{\,\mathrm{#1}\@ifnextchar\bgroup{\gobblenextarg}{}}
+\makeatother
+
+\newcommand{\tauriRAT}{RATTS\xspace}
+\newcommand{\radioRAT}{RRAT\xspace}
+\newcommand{\binaryRAT}{RRATRATTS\xspace}
+
+\newcommand{\rebound}{\texttt{REBOUND}\xspace}
+
+\newcommand{\hi}[1]{{\color{gray} #1}}
+
+\definecolor{dark}{rgb}{0.2,0.2,0.2}
+\newcommand{\darkmode}{
+    \pagecolor{dark}
+    \color{white}
+    \hypersetup{linkcolor=yellow,urlcolor=yellow,
+                anchorcolor=yellow,citecolor=yellow}
+}
+
+\begin{document}
+
+% \darkmode{}
+
+\title{{\Large RATRATARRATRATTS}\\ir\hi{R}adi\hi{AT}ed \hi{rat}s \hi{A}round \hi{R}otating \hi{RA}dio \hi{T}ransients \hi{R}evolving \hi{A}bout \hi{T}he \hi{R}un\hi{A}way \hi{T}-\hi{T}auri \hi{S}tar}
+
+% affiliations
+\newcommand{\UW}{Department of Astronomy, University of Washington, Seattle, WA, 98195}
+
+\author[0000-0001-6147-5761]{Tom Wagg}
+\affiliation{\UW}
+
+\author{Andy Tzanidakis}
+\affiliation{\UW}
+
+\author{V Hurtado}
+\affiliation{\UW}
+
+% \author{...you?}
+% \affiliation{\UW}
+
+\correspondingauthor{Tom Wagg}
+\email{tomjwagg@gmail.com}
+
+\begin{abstract}
+    In this interdisciplinary paper, we investigate formation mechanisms for and the prospect of detecting irradiated rats on planets in binary systems of Rotating RAdio Transients (\radioRAT{}) and RunAway T-Tauri Stars (\tauriRAT{}).
+
+    Neutron stars that undergo electron-capture supernovae are thought to experience weaker kicks (on the order of $30 \unit{km}{s^{-1}}$) resulting in velocities similar to ejected T-Tauri stars. A binary pulsar system that experiences these weaker kicks in the vicinity of a star forming region may encounter a \tauriRAT{}. Using N-body simulations we show that a dynamical three-body encounter between a binary pulsar and a \tauriRAT{} could lead to the ejection of a pulsar and the formation a new binary system including a \radioRAT{} and a \tauriRAT{}, which we refer to as a \binaryRAT{}. Our expert astrobiologists consider the level of irradiation that a planet in the system would experience from a combination of the pulsar beams as well as the activity and flares from the T-Tauri star. We demonstRATe how a highly specialised species of rat may evolve to survive these conditions. Finally, we ponder the ubiquitous and fundamental nature of the concept of rats in the Universe.
+\end{abstract}
+
+\keywords{April Fools, Rats, \tauriRAT{}s, \radioRAT{}s, \binaryRAT{}s, The Joy of Acronyms}
+
+\tableofcontents
+
+% \Large
+
+\section{Introduction}
+Rats. For many that word brings to mind a scurrilous, unkempt little rodent, prowling the streets of their favourite city. But not astronomers. No, they looked beyond this simple view and thought to ask the question: what more could a rat be?
+
+Why of course, they stated, a rat could be a runaway T-Tauri star (\tauriRAT), a young protostar, heartlessly ejected from its parent molecular cloud, set free into the depths of space! Simultaneously, others cried that a rat could be a rotating radio transient (\radioRAT), a rapidly spinning neutron star living as a remnant of its former self.
+
+And now, at last, with this paper we contemplate how these rats may come together as a Rotating Radio Transient Revolving About The RunAway T-Tauri Star (\binaryRAT). In this way they may breathe life back into one another, as well as newly formed nearby planets, spurring on the creation of yet another form of rats.
+
+\subsection{Recent \tauriRAT{} observations}
+\todo{Cite the journal club paper and give some intro on \tauriRAT{}s}
+
+\subsection{Known sample of \radioRAT{}s}
+\todo{Cite some stuff on \radioRAT{}s and give some intro on ones we know of}
+
+\subsection{The confusion between \tauriRAT{}s and \radioRAT{}s}
+Some might argue that the acronyms assigned to the noble \tauriRAT and \radioRAT objects are overly similar, confusing even, for the uninitiated reader. On the contrary we emphasise that the confusion you may feel is but a symptom of the awe engendered by the fundamental nature of rats in the Universe. We will elaborate further on this realisation in Section~\ref{sec:fundamental_rats}.
+
+\subsection{This paper and the \binaryRAT}
+In this paper we bring together two disparate\footnote{dispaRATe? Conincidence? I think not.} classes of objects and consider what one could achieve through their union as a \binaryRAT. In Section~\ref{sec:rat_formation} we discuss and demonstrate a potential formation mechanism for \binaryRAT{}s. In Section~\ref{sec:radiation} we consider the radiation that a planet in a \binaryRAT system may be subjected to, and thus in what ways rats may need to evolve. We delve further into the philosophy of the fundamental nature of rats in our Universe in Section~\ref{sec:fundamental_rats} and finally draw our conclusions.
+
+\section{\binaryRAT{} formation}\label{sec:rat_formation}
+
+The formation of a \binaryRAT system in-situ (i.e.\ formed as a binary) may prove difficult given the dramatic nature of dynamical encounters necessary to eject a \tauriRAT from a molecular cloud (see Section~\ref{sec:tts_ejections}). We therefore postulate that a \binaryRAT may be formed \textit{dynamically}, through a 3-body encounter between a \tauriRAT and a binary containing a \radioRAT. In the following subsections we explain how each of these systems can acquire the requisite velocity and demonstrate how such an encounter might proceed.
+
+\subsection{Evolution of a \radioRAT}
+
+\missingfigure{Cartoon evolution of a \radioRAT + MS binary}
+
+\tom{Talk through a NS+MS typical evolution (use my cogsworth cartoon plotter). Explain electron-capture supernovae and cite the relevant works for approximate kick strengths (something like Igoshev+20 probably)}
+
+\subsection{T-Tauri ejections from molecular clouds}\label{sec:tts_ejections}
+
+\tom{Explain how dynamical encounters can ejects stars from clouds}
+
+\subsection{N-body simulations of \binaryRAT{}s}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\columnwidth]{rat_formation.pdf}
+    \caption{An example formation scenario of a \binaryRAT through a 3-body exchange process between a \tauriRAT and a binary containing a main sequence star and a \radioRAT. Inset panel shows the detail of the initial evolution (with scatter points to highlight staring positions). An animated version of this plot is available \href{https://www.tomwagg.com}{here}.\\\textbf{NOTE:} Of critical importance, upon rotating the image and squinting heavily, the outline of a rat is revealed (\href{https://www.tomwagg.com}{see here} for an annotated version)!}
+    \label{fig:rat_rebounding}
+\end{figure}
+
+We use the N-body code \rebound\needcite{} to simulate a 3-body encounter between a \tauriRAT and a binary containing a \radioRAT and a main sequence star. We initialise a binary containing a $1.4 \unit{M_\odot}$ neutron star and $0.3 \unit{M_\odot}$ main sequence star with an orbital separation of $2.5 \unit{AU}$, moving with a centre of mass velocity of approximately $30 \unit{km}{s^{-1}}$ (motivated by the assumption that the NS underwent an ECSN). We then add a \tauriRAT of mass $0.9 \unit{M_\odot}$, moving with a velocity of approximately $45 \unit{km}{s^{-1}}$ towards the binary and trace the evolution of the system.
+
+We show the evolution of this system in Figure~\ref{fig:rat_rebounding}. The interaction between the \tauriRAT and initial binary leads to a series of several chaotic encounters, at the end of which the main sequence star is ejected and a \binaryRAT system is formed.
+
+\section{Radiation and Rat Evolution}\label{sec:radiation}
+\subsection{Radiation in the vicinity of a \binaryRAT}
+\todo{Estimate the radiation one might expect when orbiting a \binaryRAT, considering both components - jet emission from rotating NS? Periodic outbursts from a TTS?}
+
+\subsection{Terrestrial examples of specialised rat evolution}
+\andy{Andy wants to write this subsection}
+Rats have already demonstrated a remarkable ability to adapt to their environments through specialised evolution. Let us consider some terrestrial examples of this sort of evolution:
+\begin{itemize}
+    \item NYC Pizza Rat
+\end{itemize}
+Beyond these examples, human imagination knows no bounds in considering other forms of potential rat evolution
+\begin{itemize}
+    \item Remy from Ratatouille
+    \item Splinter from TMNT
+    \item Rattata
+    \item Scabbers a.k.a Peter Pettigrew
+\end{itemize}
+
+\missingfigure{Grid of faces of famous rats?}
+
+\section{The fundamental nature of rats}\label{sec:fundamental_rats}
+\v{v has thoughts here}
+\begin{itemize}
+    \item In many ways, albeit primarily orthographically, rats are simply a reflection of a star and thus it is no surprise astronomer are drawn to acronyms involving them
+    \item Scientists across astronomy, gastronomy, biology discover, classify and invent rats
+    \item Rats are present in the case of baby stars (\tauriRAT), regular stars (regular rats) and dead stars (\radioRAT), thus spanning the entire life of stars
+\end{itemize}
+
+
+\section*{Conclusions}%\label{sec:conclusions}
+In this paper, we present new findings relating to \binaryRAT systems and their potential to host planets supporting life for irradiated rats. Though our conclusions are many and far reaching, we leave you with some of the main implications of this work:
+\begin{enumerate}
+    \item \textbf{Astronomers love rats}\\Whether they are running away, rotating rapidly or simply roaming the streets, astronomers cannot stop name objects after rats.
+    \item \textbf{The acronyms have gone too far folks}\\It may be time for astronomers to accept that the acronyms, and in particular back-ronyms\footnote{A lesser cousin of the acronym, in which the acronym is designed before the words it represents} are getting a little out of hand.
+    \item \textbf{I should really go and work on my thesis}\\Sleep deprivation and procrastination make for powerful creative writing aids, except in the case of a thesis.
+\end{enumerate}
+
+\software{\citep{matplotlib}}
+
+\begin{acknowledgements}
+    We are deeply grateful to Eric Agol for bringing the concept of a \radioRAT{} to our attention during a journal club presentation on \tauriRAT{} by TW - without this critical input our insightful work might never have been realised.
+\end{acknowledgements}
+
+\bibliography{bibs/software.bib, bibs/paper.bib}
+
+\appendix
+\section*{A story of further evidence}
+\todo{Write out a whole paragraph where each first letter of the line spells out some message about rats - more fun if it is a story about us}
+
+How might this all relate to rats you ask? Try reading vertically instead of horizontally and see what fundamental message on rats that you uncover.
+
+\end{document}
