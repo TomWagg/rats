@@ -100,7 +100,7 @@ def plot_full_tracks(tracks, save=False, inset_lim=2000):
                 arrowprops=dict(arrowstyle="<|-", color="white", lw=1))
 
     if save is not None:
-        plt.savefig('paper/figures/rat_formation.pdf' if isinstance(save, bool) else save,
+        plt.savefig('../paper/figures/rat_formation_temp.pdf' if isinstance(save, bool) else save,
                     format="pdf", bbox_inches="tight", dpi=600)
 
     plt.show()
@@ -154,7 +154,7 @@ def animate_tracks(tracks, timesteps, save=None):
 
     if save is not None:
         FFwriter = animation.FFMpegWriter(fps=30)
-        ani.save('rat_formation.mp4' if isinstance(save, bool) else save, writer = FFwriter, dpi=300)
+        ani.save('../paper/figures/rat_formation_temp.mp4' if isinstance(save, bool) else save, writer = FFwriter, dpi=300)
 
 
     plt.show()
